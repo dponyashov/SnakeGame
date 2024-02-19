@@ -45,12 +45,14 @@ public class GraphicsSnakeGame extends JPanel {
         super.paintComponent( g );
         if( status == SnakeGameStatus.IN_GAME ){
             if ( this.apple != null ) {
-                CellSnakeGame cellSnakeGame = new CellSnakeGame( this.apple.y() * cellSize, this.apple.x() * cellSize, cellSize, (Color)this.apple.color() );
+                CellSnakeGame cellSnakeGame = new CellSnakeGame( this.apple.y() * cellSize,
+                        this.apple.x() * cellSize, cellSize, this.apple.color());
                 cellSnakeGame.draw( g );
             }
             if ( this.snake != null ) {
                 for ( Point point: this.snake.points() ) {
-                    CellSnakeGame cellSnakeGame = new CellSnakeGame( point.y() * cellSize, point.x() * cellSize, cellSize, (Color)point.color() );
+                    CellSnakeGame cellSnakeGame = new CellSnakeGame( point.y() * cellSize,
+                            point.x() * cellSize, cellSize, point.color());
                     cellSnakeGame.draw( g );
                 }
             }

@@ -14,7 +14,7 @@ public class SnakeGameTest {
             WindowSnakeGame.showWindow( snakeGame );
             try{
                 Thread.sleep( stepDelay );
-            } catch(Exception e){}
+            } catch(Exception ignored){}
         }
     }
 }
